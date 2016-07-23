@@ -1,0 +1,50 @@
+<html>
+<script src="js/jquery.terminal-0.10.12.min.js"></script>
+<script src="js/jquery.mousewheel-min.js"></script>
+<link href="css/jquery.terminal-0.10.12.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/0.10.12/js/jquery.terminal.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/0.10.12/css/jquery.terminal.min.css" rel="stylesheet"/>
+<script src="../js/jquery-1.7.1.min.js"></script>
+<script src="../js/jquery.mousewheel-min.js"></script>
+<script src="../js/jquery.terminal.min.js"></script>
+<link href="../css/jquery.terminal.css" rel="stylesheet"/>
+<script>
+jQuery(document).ready(function($) {
+    $('body').terminal("json-rpc-service-demo.php", {
+        login: true,
+        greetings: "You are authenticated",
+        onBlur: function() {
+            // the height of the body is only 2 lines initialy
+            return false;
+        }
+    });
+});
+</script>
+
+<body>
+
+
+  <script>
+  jQuery(function($, undefined) {
+      $('#term_demo').terminal(function(command, term) {
+          if (command !== '') {
+              var result = window.eval(command);
+              if (result != undefined) {
+                  term.echo(String(result));
+              }
+          }
+      }, {
+          greetings: 'Javascript Interpreter',
+          name: 'js_demo',
+          height: 200,
+          width: 450,
+          prompt: 'js> '
+      });
+  });
+</script>
+</body>
+
+
+
+
+</html>
