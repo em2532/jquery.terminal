@@ -14,12 +14,27 @@ jQuery(document).ready(function($) {
         term.echo("login")
         term.echo("ls")
         term.echo("cat")
+        term.echo("xstart")
+      }
+
+      else if(command === "xstart"){
+        term.echo("\tLaunching actual website.....");
+        term.echo("\t\tSike! Did you seriously fall for that ?!?!");
       }
 
       else if(command === "hello"){
         term.echo("Greetings, my name is Edgar Montano and I'm a pragmatic software engineer.");
         term.echo("\tThis is my l33t website. ");
         term.echo("\t\tI also like making music and taking long walks on the beach");
+        term.echo("\t\t\tIf you aren't l33t enough for this terminal, you can always use the GUI command.... >_>")
+      }
+
+      else if (command == "ls /bin"){
+        term.echo("Wow your l33t. Getting to the nitty gritty I like that");
+      }
+
+      else if(command == "whoami"){
+        term.echo("non-root-user, sorry :( ");
       }
 
       else if(command == "ls"){
@@ -51,7 +66,7 @@ jQuery(document).ready(function($) {
       greetings: 'Welcome to my website, pretty neat huh?',
       name: 'js_demo',
       height: 200,
-      width: 650,
+      width: 850,
       prompt: '$ '
   });
 });
