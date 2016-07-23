@@ -16,13 +16,19 @@ jQuery(document).ready(function($) {
         term.echo("cat")
       }
 
-      if(command === "ls"){
+      else if(command === "hello"){
+        term.echo("Greetings, my name is Edgar Montano and I'm a pragmatic software engineer.");
+        term.echo("\tThis is my l33t website. ");
+        term.echo("\t\tI also like making music and taking long walks on the beach");
+      }
+
+      else if(command == "ls"){
         term.echo("my_work");
         term.echo("my_skills");
         term.echo("my_contact");
       }
 
-      if(command === 'ls -a'){
+      else if(command == 'ls -a'){
         term.echo(".        my_work");
         term.echo("..       my_skills");
         term.echo(".hidden  my_contact");
@@ -45,7 +51,7 @@ jQuery(document).ready(function($) {
       greetings: 'Welcome to my website, pretty neat huh?',
       name: 'js_demo',
       height: 200,
-      width: 450,
+      width: 650,
       prompt: '$ '
   });
 });
